@@ -2,7 +2,7 @@
 /recovery	emmc	/dev/block/bootdevice/by-name/RECOVERY	flags=backup=1
 /system		ext4	/dev/block/bootdevice/by-name/SYSTEM
 /system_image	emmc	/dev/block/bootdevice/by-name/SYSTEM
-/data		ext4	/dev/block/bootdevice/by-name/USERDATA	flags=encryptable=footer;length=-16384
+/data		f2fs	/dev/block/bootdevice/by-name/USERDATA	flags=encryptable=footer;length=-16384
 /cache		ext4	/dev/block/bootdevice/by-name/CACHE
 /modem		emmc	/dev/block/bootdevice/by-name/RADIO	flags=backup=1;display="Modem";flashimg
 /hidden		ext4	/dev/block/bootdevice/by-name/HIDDEN	flags=backup=1;display="Hidden"
