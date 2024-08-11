@@ -29,6 +29,7 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 # 000RU = recovery kernel, 000KU = system kernel
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SYSMAGIC000RU
+BOARD_RAMDISK_USE_XZ := true
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -37,7 +38,7 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/kernel
 TARGET_PREBUILT_DT := $(DEVICE_TREE)/dt.img
 #BOARD_MKBOOTIMG_ARGS += --dt $(TARGET_PREBUILT_DT)
 BOARD_KERNEL_SEPARATED_DT := false
-LZMA_RAMDISK_TARGETS := recovery
+#LZMA_RAMDISK_TARGETS := recovery
 endif
 
 # Partitions
