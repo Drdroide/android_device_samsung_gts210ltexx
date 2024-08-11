@@ -29,8 +29,8 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 # 000RU = recovery kernel, 000KU = system kernel
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SYSMAGIC000RU
-BOARD_RAMDISK_USE_XZ := true
-
+#BOARD_RAMDISK_USE_XZ := true
+BOARD_RAMDISK_USE_LZMA := true
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
 ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
